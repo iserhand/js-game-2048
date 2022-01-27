@@ -13,7 +13,7 @@ const colors = ['#eee4da', '#eee1c9', '#f3b27a',
 	'#edc53f', '#edc22e', '#4f5c53', '#414d45'
 ];
 var cellElements = [
-	[0, 0, 0, 0],
+	[0, 1024, 0, 0],
 	[0, 0, 0, 0],
 	[0, 0, 0, 0],
 	[0, 0, 0, 0]
@@ -79,7 +79,7 @@ function drawCells(x, y) {
 				ctx.fillStyle = colors[Math.log2(cellElements[j][i]) - 1];
 				ctx.fillRect(i * cellSize + 19, j * cellSize + 19, cellSize - 10, cellSize - 10);
 				ctx.fillStyle = 'black'
-				ctx.fillText(cellElements[j][i], i * cellSize + 55 - cellElements[j][i] / 10, j * cellSize + 70);
+				ctx.fillText(cellElements[j][i], i * cellSize + 55-Math.log10(cellElements[j][i])*7 , j * cellSize + 70);
 			}
 			ctx.strokeRect(j * cellSize + 15, i * cellSize + 15, cellSize, cellSize);
 		}
@@ -278,8 +278,6 @@ function moveRight() {
 		createCellBlock(1);
 		drawCells();
 	}
-
-
 }
 document.addEventListener('keydown', function(event) {
 	if (event.keyCode == 38) moveUp();
