@@ -1,4 +1,5 @@
 'use strict';
+
 const cvs = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const cellSize = 100;
@@ -9,7 +10,7 @@ ctx.font = "30px Arial";
 const colors = ['#eee4da', '#eee1c9', '#f3b27a',
 	'#f69664', '#f77c5f', '#f75f3b',
 	'#edd073', '#edcc62', '#edc950',
-	'#edc53f', '#edc22e'
+	'#edc53f', '#edc22e', '#4f5c53', '#414d45'
 ];
 var cellElements = [
 	[0, 0, 0, 0],
