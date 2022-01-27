@@ -1,0 +1,1 @@
+Simple copy of 2048 game using Plain javascript on HTML5 Canvas
